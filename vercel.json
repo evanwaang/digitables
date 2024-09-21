@@ -2,5 +2,10 @@
     "routes": [
         { "src": "/api/webhook", "methods": ["POST", "GET"], "dest": "/api/webhook" },
         { "src": "/[^.]+", "dest": "/" }
-    ]
+    ],
+    "functions": {
+        "api/*.ts": {
+          "runtime": "@vercel/node@2.0.0"
+        }
+      }
   }
